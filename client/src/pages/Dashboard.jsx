@@ -50,7 +50,7 @@ function Dashboard() {
       }
 
       const response = await axios.get(
-        "http://localhost:5000/api/interviews/history",
+       `${import.meta.env.VITE_API_URL}/api/interviews/history`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -104,7 +104,7 @@ function Dashboard() {
       );
 
       const response = await axios.post(
-        "http://localhost:5000/api/interviews/generate",
+        `${import.meta.env.VITE_API_URL}/api/interviews/generate`,
         {
           role,
           difficulty,

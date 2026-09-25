@@ -548,7 +548,7 @@ function Interview() {
 
       const response =
         await axios.post(
-          "http://localhost:5000/api/interviews/transcribe",
+          `${import.meta.env.VITE_API_URL}/api/interviews/transcribe`,
           formData,
           {
             headers: {
@@ -1145,7 +1145,7 @@ function Interview() {
 
       const response =
         await axios.post(
-          "http://localhost:5000/api/interviews/evaluate",
+          `${import.meta.env.VITE_API_URL}/api/interviews/evaluate`,
           {
             interviewId:
               interview._id,
